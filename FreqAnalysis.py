@@ -64,7 +64,6 @@ class FreqAnalysis:
         f_var = []
         f_mean = []
         f_energy = []
-        f_meanamp = []
         f_ent = []
         for k, kernel in enumerate(kernels):
             filtered = ndi.convolve(image, kernel, mode='wrap')

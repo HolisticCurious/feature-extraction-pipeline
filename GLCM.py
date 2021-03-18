@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 """
-Code modified on March 2020 by Maria Teresa Parreira @Instituto Superior Tecnico, Lisboa
+Code modified on March 2021 by Maria Teresa Parreira @Instituto Superior Tecnico, Lisboa
 
     GLCM
     Copyright (c) 2016 Tetsuya Shinaji

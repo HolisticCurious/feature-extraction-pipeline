@@ -9,4 +9,4 @@ The notebook includes the steps of importing images, calculating morphological a
 *   The code also includes to option to import a label, in the format csv (with image name and numerical label). This is, of course, not a mandatory step; feature extraction can be performed without classification.
 *   GLCM features cannot be calculated in float images. As such, intensity values may have to be normalized prior to feature calculation.
 *   Sample images in sample_imgs folder (segmented nuclei).
-*   Code prepared to be run on Google Colaboratory (upload feature calculation .py files) but can be run locally
+*   Code prepared to be run on Google Colaboratory (upload feature calculation .py files) but can be run locally.

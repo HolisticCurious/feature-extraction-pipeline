@@ -60,10 +60,10 @@ class RegionPropsInt:
         features['Variance'] = np.var(self.img)
         #variance
 
-        features['Skewness'] = skew(self.img)
+        features['Skewness'] = skew(self.img, axis= None)
         #skewness of distribution
 
-        features['Kurtosis'] = kurtosis(self.img)
+        features['Kurtosis'] = kurtosis(self.img, axis = None)
         #kurtosis of distribution
 
         features['Contrast'] = np.std(self.hist)

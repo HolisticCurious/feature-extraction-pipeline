@@ -76,7 +76,7 @@ class RegionPropsMorph:
         features['Roundness'] = (4*props[0].area)/(np.pi* props[0].major_axis_length**2 )
         #Like circularity, but does not depend on perimeter/roughness.
 
-        features['Elongation'] = (props[0].major_axis_length)/ props[0].minor_axis_length
+        features['Aspect Ratio'] = (props[0].major_axis_length)/ props[0].minor_axis_length
         #Aspect ratio.
         
         features['Orientation'] = props[0].orientation

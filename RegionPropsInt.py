@@ -30,10 +30,14 @@ class RegionPropsInt:
         self.n_level = (level_max - level_min) + 1
         self.level_min = level_min
         self.level_max = level_max
+        
+        self.imgzero = img[img!=0]
 
-        hist,bin_edges = np.histogram(self.img.ravel(),level_max,[level_min,level_max])
+        hist,bin_edges = np.histogram(self.imgzero, level_max,[level_min,level_max])
         self.hist = np.array(hist)
         self.bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
+        
+        
 
         
 
@@ -51,19 +55,19 @@ class RegionPropsInt:
         
         props = regionprops(self.bin_img,self.img)
 
-        features['Mean Intensity'] = np.mean(self.img)
+        features['Mean Intensity'] = np.mean(self.imgzero)
         #mean intensity of image
 
-        features['Std'] = np.std(self.img)
+        features['Std'] = np.std(self.imgzero)
         #standard deviation
 
-        features['Variance'] = np.var(self.img)
+        features['Variance'] = np.var(self.imgzero)
         #variance
 
-        features['Skewness'] = skew(self.img, axis= None)
+        features['Skewness'] = skew(self.imgzero)
         #skewness of distribution
 
-        features['Kurtosis'] = kurtosis(self.img, axis = None)
+        features['Kurtosis'] = kurtosis(self.imgzero)
         #kurtosis of distribution
 
         features['Contrast'] = np.std(self.hist)

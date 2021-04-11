@@ -37,14 +37,14 @@ class GLCM:
         self.level_min = level_min
         self.level_max = level_max
         #self.theta = theta
-        self.glcm = greycomatrix(img, distances=[1], angles=[0, np.pi/4, np.pi/2, 3*np.pi/4], levels=256)
+        self.glcm = greycomatrix(img, distances=[1], angles=[0, np.pi/4, np.pi/2, 3*np.pi/4], levels=256, normed = True)
         #The grey-level co-occurrence histogram. The value P[i,j,d,theta] is the number of times that grey-level j 
         #occurs at a distance d and at an angle theta from grey-level i. If normed is False, the output is of type 
         #uint32, otherwise it is float64. The dimensions are: levels x levels x number of distances x number of angles.
         
         #here, we have 4 matrices
 
-        matrix = np.sum(self.glcm, axis = 3) #makes the matrix invariant as it sums all the elements for different angles
+        matrix = np.sum(self.glcm, axis = 3) / 4 #makes the matrix invariant as it sums all the elements for different angles
         self.matrix = np.ndarray((256,256,1,1))#keeps it 4-dimensional
         self.matrix[:,:,:,0] = matrix
 

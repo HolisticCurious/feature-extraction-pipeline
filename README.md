@@ -12,3 +12,5 @@ The notebook includes the steps of importing images, calculating morphological a
 *   Code prepared to be run on Google Colaboratory (upload feature calculation .py files) but can be run locally.
 
 Still working on Data Visualization.
+
+I thank Kirill Lavrenyuk @Dahl Lab for Subcellular Structure and Engineering, Carnegie Mellon University, for the example image.
